@@ -108,7 +108,7 @@ summary(resamples(list(model1, model2, model3, model4)), metric="Rsquared")
 dotplot(resamples(list(model1, model2, model3, model4)), metric="Rsquared")
 
 
-local_cluster <- makeCluster(21) #specified cores to smallest number of cores in msismall (incase I get that one) 
+local_cluster <- makeCluster(21) #specified cores
 registerDoParallel(local_cluster) 
 
 
@@ -198,7 +198,7 @@ Table3 <- tibble( #renaming table 1 as table 3
 
 Table4 <- tibble( #renaming table 2 as table 4 
   supercomputer = c(lm_toc_original$callback_msg,glmnet_toc_original$callback_msg,ranger_toc_original$callback_msg,xgbLinear_toc_original$callback_msg),
-  supercomputer_24 = c(lm_toc_par$callback_msg,glmnet_toc_par$callback_msg,ranger_toc_par$callback_msg,xgbLinear_toc_par$callback_msg)
+  supercomputer_21 = c(lm_toc_par$callback_msg,glmnet_toc_par$callback_msg,ranger_toc_par$callback_msg,xgbLinear_toc_par$callback_msg)
 )
 
 write.csv(Table3, "table3.csv")
