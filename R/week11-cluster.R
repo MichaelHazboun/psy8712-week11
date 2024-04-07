@@ -8,7 +8,7 @@ library(tictoc)
 
 
 # Data Import and Cleaning
-gss_import_tbl <- read_spss("../data/GSS2016.sav") %>%
+gss_import_tbl <- read_spss("../psy8712-week11/data/GSS2016.sav") %>%
   filter(!is.na(MOSTHRS)) %>% 
   select(-HRS1, -HRS2)
 
