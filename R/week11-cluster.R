@@ -109,7 +109,7 @@ summary(resamples(list(model1, model2, model3, model4)), metric="Rsquared")
 dotplot(resamples(list(model1, model2, model3, model4)), metric="Rsquared")
 
 
-local_cluster <- makeCluster(24) #specified cores to smallest number of cores in msismall (incase I get that one) 
+local_cluster <- makeCluster(21) #specified cores to smallest number of cores in msismall (incase I get that one) 
 registerDoParallel(local_cluster) 
 
 
