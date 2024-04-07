@@ -218,3 +218,11 @@ xgbLinear_fast <- as.numeric((xgbLinear_toc_original$toc-xgbLinear_toc_original$
 
 
 f_s_diff <- as.numeric((xgbLinear_toc_par$toc-xgbLinear_toc_par$tic)-(lm_toc_par$toc-lm_toc_par$tic))
+
+#Questions
+#1
+# Given that xgbLinear took only around 21 seconds when using the super computer (and when I parallelized it and used my computer it took around 100 or so). I'm going to have to say that it benefited the most because that 80 second reduction is just a much better time save than any of the other models.
+#2
+# Granted I'm comparing default, the number of cores this PC has and the 21 I used in the super computer (so not a large sample size) but the more cores I used the faster the longer models were. The shorter models didn't benefit as much from an increase in cores.
+#3
+# Simply due to how much faster the xgbLinear model is with the super computer than how it was without, I'd have to say use the xgbLinear model with the super computer. I choose the xgbLinear model when it was slower over the ranger model (though in table 3 this time the ranger/random forest model, out-performed xgblinear by a decent amount in the holdout). So unless we're using a simple model ("glmnet" on a small dataset), I'd simply suggest the xgbLinear model with the super computer, it's the most accurate, and when using the super computer it's not that much slower than the ranger model.
